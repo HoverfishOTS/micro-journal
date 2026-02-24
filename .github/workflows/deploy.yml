@@ -22,4 +22,4 @@ jobs:
             source venv/bin/activate
             pip install -r requirements.txt
             pkill -f app.py || true
-            nohup python3 app.py > server.log 2>&1 &
+            nohup python3 app.py > server.log 2>&1 </dev/null &
