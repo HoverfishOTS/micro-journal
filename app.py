@@ -36,7 +36,6 @@ def add_entry():
     }
     entries_collection.insert_one(entry)
     
-    # Remove _id before returning to client
     entry.pop('_id', None)
     return jsonify(entry), 201
 
